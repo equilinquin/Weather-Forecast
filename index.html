@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,81 @@
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
 </head>
+
 <body>
     <header>Weather Dashboard</header>
 
     <div class="container">
         <div class="row">
-        <div class="col-3 search-list">
-            <div class="search row">
-                <input id="city" placeholder="Search City...">
-                <button class="search-btn"></button>
+            <div class="col-3 search-list">
+                <div class="search row">
+                    <input id="city" placeholder="Search City...">
+                    <button type="button" class="btn btn-primary" id="searchbtn">                        
+                            <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div id="results">
+                </div>
             </div>
-        </div>
-        <div class="list-content col-9">
-            <h1 id="show-city">City: </h1>
-            <div id="temp">Temp: </div>
-            <div id="humid">Humid: </div>
-            <div id="windspeed">Wind: </div>
-            <div id="uv-index">UV: </div>
-            <div class="fiveday col-9"></div>
-        </div>
+            <div class="list-content col-9">
+                <h1 id="show-city">Search City Weather for Results</h1>
+                <div id="img"></div>
+                <div id="temp"></div>
+                <div id="humid"></div>
+                <div id="windspeed"></div>
+                <div id="uv-index"></div>
+                <div class="fiveday">
+                    5-Day Forecast
+                    <div class="card-deck">
+                        <div class="card p-3 mb-2 bg-primary text-white">
+                            <div id="date1"></div>
+                            <img class="first card-img-top" alt="...">
+                            <div id="temp1"></div>
+                            <div id="humid1"></div>
+                        </div>
+                        <div class="card p-3 mb-2 bg-primary text-white">
+                            <div id="date2"></div>
+                            <img class="second card-img-top" alt="...">
+                            <div id="temp2"></div>
+                            <div id="humid2"></div>
+                        </div>
+                        <div class="card p-3 mb-2 bg-primary text-white">
+                            <div id="date3"></div>
+                            <img class="third card-img-top" alt="...">
+                            <div id="temp3"></div>
+                            <div id="humid3"></div>
+                        </div>
+                        <div class="card p-3 mb-2 bg-primary text-white">
+                            <div id="date4"></div>
+                            <img class="fourth card-img-top" alt="...">
+                            <div id="temp4"></div>
+                            <div id="humid4"></div>
+                        </div>
+                        <div class="card p-3 mb-2 bg-primary text-white">
+                            <div id="date5"></div>
+                            <img class="fifth card-img-top" alt="...">
+                            <div id="temp5"></div>
+                            <div id="humid5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-
-
-
-    <script scr="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

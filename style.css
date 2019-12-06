@@ -7,26 +7,33 @@ header {
 }
 .container {
     position: absolute;
-    height: 100%;
     width: 100%;
-    border: solid 1px black;
 }
-.search-btn {
-    width: 40px;
-    height: 30px;
-    background-color: #06AED5;
-    color: white;
-  }
 .search-list {
-    border: solid 1px blue;
     background-color: lightblue;
     height: 858px;
 }
-.list-content {
-    border: solid 1px green;
-}
+
 .search {
     padding-top: 10px;
     padding-left: 20px;
 
+}
+#temp,
+#humid,
+#windspeed,
+#uv-index {
+    font-size: 30px;
+}
+.fiveday {
+    font-size: 30px;
+    padding-top: 50px;
+    font-weight: bolder;
+    display: none;
+}
+
+.card {
+    background: blue;
+    font-size: medium;
+    padding: 20px;
 }
