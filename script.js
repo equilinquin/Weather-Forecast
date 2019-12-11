@@ -21,7 +21,7 @@ $(document).ready(function () {
     
     
     var cityinput = $("#city").val();
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityinput + "&units=imperial&appid=2773778a96cd8ad6907c9b5308565aa1";
+    var queryURL = "https`://api.openweathermap.org/data/2.5/weather?q=" + cityinput + "&units=imperial&appid=2773778a96cd8ad6907c9b5308565aa1";
     searchArr.push(cityinput);
     function getWeather() {
         //Current weather at select city
