@@ -137,7 +137,7 @@ $(document).ready(function () {
         localStorage.setItem("history", JSON.stringify(searchArr));
       });
 
-      
+      $("#city").val("");
     }
   });
 });
