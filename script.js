@@ -134,7 +134,7 @@ $(document).ready(function () {
         $("<div class='history'></div>");
         $(".history").text(val);
         $("#results").prepend("<hr>" + val);
-        localStorage.setItem("history", JSON.stringify(searchArr));
+        localStorage.setItem("history", JSON.stringify(newArr));
       });
 
       $("#city").val("");
