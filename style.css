@@ -13,23 +13,33 @@ header {
     background-color: lightblue;
     height: 858px;
 }
+.list-content {
+    background-image: url("./images/body-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .search {
     padding-top: 10px;
     padding-left: 20px;
 
 }
+#show-city {
+    color: white;
+}
 #temp,
 #humid,
 #windspeed,
 #uv-index {
     font-size: 30px;
+    color: white;
 }
 .fiveday {
     font-size: 30px;
     padding-top: 50px;
     font-weight: bolder;
     display: none;
+    color: white;
 }
 
 .card {
