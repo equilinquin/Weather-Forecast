@@ -30,13 +30,14 @@ $(document).ready(function () {
       }).then(function (data) {
         var date = moment().format("l");
 
+
         var icon = data.weather[0].icon;
         var iconImg =
           "<img src='https://openweathermap.org/img/wn/" + icon + "@2x.png'/>";
         $("#show-city").html("City: " + data.name + " " + date + " " + iconImg);
-        $("#temp").html("Temp: " + data.main.temp + " &#176;F");
-        $("#humid").html("Humidity: " + data.main.humidity + " &#37;");
-        $("#windspeed").html("Wind Speed: " + data.wind.speed + " MPH");
+        $("#temp").html("<i class='fas fa-temperature-low 2x'></i>  Temp: " + data.main.temp + " &#176;F");
+        $("#humid").html("<i class='fas fa-thermometer-half 2x'></i>  Humidity: " + data.main.humidity + " &#37;");
+        $("#windspeed").html("<i class='fas fa-wind 2x'></i> Wind Speed: " + data.wind.speed + " MPH");
 
         var long = data.coord.lon;
         var lat = data.coord.lat;
@@ -51,7 +52,11 @@ $(document).ready(function () {
           url: uvIndexURL,
           method: "GET",
         }).then(function (uv) {
-          $("#uv-index").html("UV Index: " + uv.value);
+          var uv = uv.value
+          if (uv > 11) {
+            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: " + uv.css({"color": "violet"}))
+          }
+          //  $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: " + uv);
         });
         var geoURL =
           "https://api.openweathermap.org/data/2.5/forecast?appid=2773778a96cd8ad6907c9b5308565aa1&units=imperial&lat=" +
