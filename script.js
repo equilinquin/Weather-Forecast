@@ -54,9 +54,16 @@ $(document).ready(function () {
         }).then(function (uv) {
           var uv = uv.value
           if (uv > 11) {
-            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: " + uv.css({"color": "violet"}))
+            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: <span style='color:violet;'>" + uv + "</span>")
+          } else if (uv <= 2) {
+            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: <span style='color:green;'>" + uv + "</span>")
+          } else if (uv <= 5 ) {
+            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: <span style='color:yellow;'>" + uv + "</span>")
+          } else if (uv <=7) {
+            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: <span style='color:orange;'>" + uv + "</span>")
+          } else {
+            $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: <span style='color:red;'>" + uv + "</span>")
           }
-          //  $("#uv-index").html("<i class='fas fa-sun' 2x></i> UV Index: " + uv);
         });
         var geoURL =
           "https://api.openweathermap.org/data/2.5/forecast?appid=2773778a96cd8ad6907c9b5308565aa1&units=imperial&lat=" +
