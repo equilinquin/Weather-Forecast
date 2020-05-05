@@ -143,9 +143,9 @@ $(document).ready(function () {
         return index === self.indexOf(elem);
       });
       newArr.map(function (val) {
-        $("<div class='history'></div>");
+        $("<hr><div class='history'></div>");
         $(".history").text(val);
-        $("#results").prepend("<hr>" + val);
+        $("#results").prepend("<hr>" + val).css("font-size", "xx-large");
         localStorage.setItem("history", JSON.stringify(newArr));
       });
 
