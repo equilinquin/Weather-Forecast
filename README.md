@@ -18,4 +18,4 @@ This app is connected to a weather API that will generate the weather presently,
 
 ## Images of deployed site
 
-![Weather-image](./images/Weather-Forecast.png)
+![Weather-image](./images/Weather-Forecast2.png)
