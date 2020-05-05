@@ -4,13 +4,15 @@ header {
     text-align: center;
     font-size: 50px;
     padding: 30px 0px;
+    -webkit-text-stroke-width: 1gipx;
+    -webkit-text-stroke-color: black;
 }
 .container {
     position: absolute;
     width: 100%;
 }
 .search-list {
-    background-color: lightblue;
+    background-color: darkgrey;
     height: 858px;
 }
 .list-content {

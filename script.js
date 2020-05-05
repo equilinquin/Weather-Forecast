@@ -7,7 +7,7 @@ $(document).ready(function () {
   for (var i = 0; i < searchArr.length; i++) {
     var city = searchArr[i];
 
-    var div = "<hr><div class='history'>" + city + "</div>";
+    var div = "<br><div class='history'>" + city + "</div>";
     $("#results").prepend(div);
     var pastArr = JSON.parse(localStorage.getItem(city)) || [];
     console.log(pastArr);
